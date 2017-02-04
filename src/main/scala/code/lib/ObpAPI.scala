@@ -508,7 +508,7 @@ object APIUtils extends Loggable {
     responseCode match {
       case 200 | 201 => tryo{parse(body)}
       case _ => {
-        val failMsg = "Bad response code (" + responseCode + ") from OBP API server: " + body
+        val failMsg = "Bad response code (" + responseCode + ") from Finocial API server: " + body
         logger.warn(failMsg)
         Failure(failMsg)
       }
